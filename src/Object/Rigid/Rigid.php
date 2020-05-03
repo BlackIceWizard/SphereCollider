@@ -2,9 +2,9 @@
 
 namespace App\Object\Rigid;
 
-use App\Object\FrontalImpact;
+use App\Object\Collision;
 
 interface Rigid
 {
-    public function impact(FrontalImpact $impact);
+    public function impact(Collision $collision);
 }

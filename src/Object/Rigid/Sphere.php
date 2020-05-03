@@ -2,7 +2,7 @@
 
 namespace App\Object\Rigid;
 
-use App\Object\FrontalImpact;
+use App\Object\Collision;
 
 class Sphere implements Rigid
 {
@@ -15,9 +15,11 @@ class Sphere implements Rigid
         $this->speed = $speed;
     }
 
-    public function impact(FrontalImpact $impact)
+    public function impact(Collision $collision)
     {
-        // TODO: Implement impact() method.
+        $collision->addParticipant($this->weight, $this->speed, function (float $newSpeed) {
+            $this->speed = $newSpeed;
+        });
     }
 
     public function toArray(): array
