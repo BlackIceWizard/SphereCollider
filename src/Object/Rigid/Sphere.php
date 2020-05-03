@@ -2,7 +2,9 @@
 
 namespace App\Object\Rigid;
 
-class Sphere
+use App\Object\FrontalImpact;
+
+class Sphere implements Rigid
 {
     private float $weight;
     private float $speed;
@@ -11,6 +13,11 @@ class Sphere
     {
         $this->weight = $weight;
         $this->speed = $speed;
+    }
+
+    public function impact(FrontalImpact $impact)
+    {
+        // TODO: Implement impact() method.
     }
 
     public function toArray(): array
