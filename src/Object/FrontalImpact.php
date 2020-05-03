@@ -14,4 +14,9 @@ class FrontalImpact implements Phenomenon
         $this->first = $first;
         $this->second = $second;
     }
+
+    public function happen(): void
+    {
+        // TODO: Implement happen() method.
+    }
 }
