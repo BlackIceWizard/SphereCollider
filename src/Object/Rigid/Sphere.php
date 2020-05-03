@@ -12,4 +12,12 @@ class Sphere
         $this->weight = $weight;
         $this->speed = $speed;
     }
+
+    public function toArray(): array
+    {
+        return [
+          'weight' => $this->weight,
+          'speed' => $this->speed,
+        ];
+    }
 }
